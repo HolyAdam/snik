@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+* {
+  font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+}
+
+.wrapper {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+  border-radius: 20px;
+  background-color: #fff;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+
+.header {
+  border-bottom: 1px solid #eaeaea;
+  .headerLeft {
+    h3, p {
+      margin: 0;
+    }
+
+    img {
+      margin-right: 15px;
+    }
+  }
+}
+
+.content {
+  h1 {
+    margin: 0;
+  }
+}
+
+.search-block {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0 12px;
+  position: relative;
+
+  .clear {
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+  
+
+  input {
+    border: none;
+    padding: 11px;
+    padding-right: 40px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.drawerTop {
+  overflow: auto;
+  margin-bottom: 30px;
+}
+
+.cartItem {
+
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+
+  p {
+    font-size: 16px;
+    margin: 0;
+  }
+  strong {
+    font-size: 14px;
+  }
+
+  .removeBtn {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
+
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.drawerBottom {
+  ul {
+    margin-bottom: 30px !important;
+  }
+  li {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #bbb;
+      margin: 0 7px;
+      position: relative;
+      top: -5px;
+    }
+  }
+
+
+  .greenBtn {
+    position: relative;
+
+    &:disabled {
+      opacity: 0.75;
+    }
+
+    &:hover img {
+      transform: translateX(7px) translateY(-50%);
+    }
+
+    img {
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+}
+
+.greenBtn {
+  width: 100%;
+  background: #9DD558;
+  border-radius: 18px;
+  font-size: 16px;
+  border: 0;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background-color: lighten(#9DD558, 5%);
+    cursor: default;
+  }
+
+  &:active {
+    background-color: darken(#9DD558, 5%);
+  }
+
+}
